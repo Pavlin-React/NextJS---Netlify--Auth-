@@ -5,7 +5,7 @@ import AuthContext from '../stores/authContext'
 
 export default function Navbar() {
 
-  let user = useContext( AuthContext )
+  let { user, login } = useContext( AuthContext )
   console.log( user );
 
   return (
@@ -16,6 +16,7 @@ export default function Navbar() {
         <ul>
           <li><Link href="/"><a>Home</a></Link></li>
           <li><Link href="/guides"><a>Guides</a></Link></li>
+          <li onClick={ login } className='btn'>Login/SignUp</li>
         </ul>
       </nav>
       <div className="banner">
