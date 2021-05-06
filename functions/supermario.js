@@ -1,4 +1,4 @@
-exports.handler = () => {
+exports.handler = async () => {
   console.log( 'function run' );
 
   let data = { name: 'mario', age: 35, job: 'plumber' }
